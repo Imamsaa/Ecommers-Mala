@@ -175,4 +175,9 @@ class Product extends Model
         return Product::select('*')
         ->get();    
     }
+
+    static function getSingle($id)
+    {
+        return Product::find($id);
+    }
 }

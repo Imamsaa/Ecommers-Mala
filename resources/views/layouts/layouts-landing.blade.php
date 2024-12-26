@@ -29,9 +29,9 @@
             <li><a href="/" class="active">Home</a></li>
             <li class="dropdown">
                 <a href="/products">Produk</a>
-                <ul class="dropdown-menu">
+                <!-- <ul class="dropdown-menu">
                     <li><a href="produk.html">Peralatan Kebersihan</a></li>
-                </ul>
+                </ul> -->
             </li>
         </ul>
     </nav>

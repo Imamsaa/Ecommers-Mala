@@ -46,4 +46,14 @@ class UserLandingController extends Controller
     return view('landing.landing-page', compact('products', 'categories'));
 }
 
+public function list(Request $request)
+{
+    $categories = Category::all();
+    $query = Product::query()->active()->inStock();
+    $query->latest();
+    $products = $query->paginate(20);
+    $products->appends($request->all());
+    return view('landing.product-page', compact('categories', 'products'));
+}
+
 }

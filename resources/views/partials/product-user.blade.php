@@ -14,7 +14,7 @@
             </div>
             <!-- Product Info -->
             <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">{{ $product->name }}</h3>
+                <a href="{{ url('detail/?id='.$product->id) }}"><h3 class="text-lg font-semibold text-gray-900">{{ $product->name }}</h3></a>
                 <p class="mt-1 text-sm text-gray-500">{{ Str::limit($product->description, 40) }}</p>
                 <div class="mt-4 flex items-center justify-between">
                     <span class="text-blue-600 font-bold text-lg">Rp {{ number_format($product->price, 0, ',', '.') }}</span>

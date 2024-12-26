@@ -9,6 +9,8 @@ use App\Http\Controllers\User\UserCheckoutController;
 use App\Http\Controllers\User\UserLandingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\User\DetailController;
+use App\Http\Controllers\UlasanController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -21,12 +23,12 @@ Route::get('/cart', function () {
 Route::get('/search', function () {
     return view('search');
 });
-Route::get('/products', function () {
-    return view('products');
-});
 
 
 
+Route::get('/detail', [DetailController::class, "detail"]);
+Route::get('/products', [UserLandingController::class, "list"])->name('List');
+Route::post('/ulasan', [UlasanController::class, "index"])->name('Ulasan');
 
 
 //Auth Routes
